@@ -1,0 +1,219 @@
+@charset "ISO-8859-1";
+
+*{
+	font-family: "Verdana"; 
+}
+
+body {
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+}
+
+a{
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+div#divLogotipoSistema {
+	background-color: #1e9bde;
+	height: 70px;
+}
+
+img#imglogotiposistema{
+	height: 60%;
+	vertical-align:  middle;
+}
+
+span#spanauxalinhamentovertical {
+	display: inline-block;
+	height: 100%;
+	vertical-align:  middle;
+	
+}
+
+img#imgiconusuario{
+	width: 100px;
+}
+
+h1 {
+	color: #1e9bde;
+	background-color: #eeeeee;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 20px ;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 10px solid #1e9bde;
+	border-right: 10px solid #1e9bde;
+	border-top: 2px solid #1e9bde;
+	border-bottom: 2px solid #1e9bde;
+	border-radius: 30px;
+}
+
+div#mensagemerro {
+	background-color: #d40000;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	color: #ffffff;
+	
+	
+	
+}
+
+div#divusuariologado{
+	background-color: #7bc2e5;
+	color: #ffffff;
+	line-height: 40px;
+}
+
+img#imgiconecarrinho {
+	height: 50px;
+	
+	
+}
+
+fieldset {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-width: 2px;
+	border-radius: 5px;
+}
+
+input, textarea, select {
+	border: 2px solid #1e9bde;
+	
+	border-radius: 30px;
+	margin-bottom: 6px;
+	
+	
+}
+
+textarea {
+	width: 300px;
+	height: 100px;
+}
+
+input[type=text], input[type=password], select {
+	font-size: 15px;
+	width: 140px;
+	padding-left:10px; 
+}
+
+input[type=button], input[type=submit] {
+	background-color: #1e9bde;
+	border-bottom: 3px solid #0153b0;
+	border-top: 1px solid #0153b0;
+	border-left: 1px solid #0153b0;
+	border-right: 1px solid #0153b0;
+	border-radius: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 5px 8px;
+	
+}
+
+input[type=button]:hover,input[type=submit]:hover {
+	background-color: #69c5ee;
+	border-color: #1e9bde;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #cccccc;
+	border-radius: 30px;
+	border-spacing: 1px;
+	
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+	
+}
+tr:nth-child(odd) {
+	background-color: #bbbbbb;
+	
+	
+}
+
+th {
+	background-color: #1e9bde;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 3px;
+}
+
+td {
+	padding: 3px;
+}
+
+div#divcategoriascomidaopcao{
+	
+	float: left;
+	height: 130px;
+}
+
+div#divcategoriascomidageral{
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+img#imgcategoriacomida {
+	
+	height: 50%;
+	
+}
+fieldset#fielsetfiltros {
+	
+	border-width: 3px;
+	
+}
+
+input#inputselecionado {
+	background-color: #69c5ee;
+	border-color: #1e9bde;
+	
+}
+
+img#imgRestauranteOpcao{
+	height: 130px;
+	border-radius: 30px;
+	
+}
+span#restauranteopcaotitulo{
+	font-weight: bold;
+}
+
+div#restauranteopcao{
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	
+}
+
+div#mensagemsucesso{
+	background-color:#0baf00;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	color: #ffffff;
+}
+
+.inputError{
+	border: 2px solid #ff2828;
+}
+
+
