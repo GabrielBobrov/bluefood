@@ -74,7 +74,7 @@
 			<div>
 				<h1>Menu</h1>
 			</div>
-			
+			<fieldset>
 			<div id="divCategoriasComidaGeral" th:each="item : ${itensCardapioNaoDestaque}" style="margin-top: 20px;">
 				<div id="divRestaurantesOpcao">
 					<img th:src="@{/images/comida/} + ${item.imagem}" id="imgRestauranteOpcao"><br />
@@ -99,6 +99,7 @@
 					</form>
 				</div>
 			</div>
+			</fieldset>
 			<br /><br />
 			
 			<input type="button" value="Voltar" th:onclick="'location.href=\'' + @{/cliente/home} + '\';'">

@@ -92,7 +92,7 @@ public class RestauranteService {
 			throw new IllegalStateException("O tipo de busca "+ filter.getSearchType() + " não é suportado");
 		}
 		
-		Iterator<Restaurante> it= restaurantes.iterator();
+		Iterator<Restaurante> it= restaurantes.iterator();//iterator aponta para objeto especifico da coleção, so foi utilizado por poder remover
 		while(it.hasNext()) {
 			Restaurante restaurante = it.next();
 			double taxaEntrega = restaurante.getTaxaEntrega().doubleValue();
@@ -102,7 +102,7 @@ public class RestauranteService {
 			
 		}
 		RestauranteComparator comparator = new RestauranteComparator(filter, SecurityUtils.loggedCliente().getCep());
-		restaurantes.sort(comparator);
+		restaurantes.sort(comparator);//usa o comparator como base para ordenar a lista de restaurantes
 		return restaurantes;
 		
 	}

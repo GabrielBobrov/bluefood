@@ -7,7 +7,7 @@
 <body>
 
 	<div layout:fragment="content">
-	<div id="mensagemDeErro" th:if="${msg != null}">
+	<div id="mensagemerro" th:if="${msg != null}">
 	<span th:text="${msg}"></span>
 	
 	</div>
@@ -24,8 +24,8 @@
 				th:text="'Quantidade: ' + ${item.quantidade}"></span><br /> <span
 				th:text=${item.observacoes}></span><br /> <span
 				th:text="${#numbers.formatCurrency(item.preco)}"></span><br />
-			<br /> <input type="button" value="Remover"
-				th:onclick="'location.href=\'' + @{/cliente/carrinho/remover} + '?itemId=' + ${item.itemCardapio.id} + '\';'" />
+			<br /> 
+			<input type="button" value="Remover" th:onclick="'location.href=\'' + @{/cliente/carrinho/remover} + '?itemId=' + ${item.itemCardapio.id} + '\';'" />
 				<br /><br />
 		</div>
 		<br />
@@ -48,16 +48,17 @@
 				<span>Total</span><br /> <span
 					th:text=${#numbers.formatCurrency(carrinho.getPrecoTotal(true))}>></span>
 			</div>
-
+			<form method="post" th:action="@{/cliente/pagamento/pagar}">
 			<div>
-				<span>Cartão de Crédito</span> <input type="text" name="cartao"
-					onkeypress="return isNumberKey(event)" />
+				<span>Cartão de Crédito</span> 
+				<input name= "numCartao" type="text"  onkeypress="return isNumberKey(event)" />
 			</div>
 
 			<div>
-				<input type="button" value="Enviar pedido" /> <br /> <input
-					type="button" value="Voltar" />
+				<input type="submit" value="Enviar pedido" /> <br /> 
 			</div>
+			
+			</form>
 			</div>
 
 		</div>

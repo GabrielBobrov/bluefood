@@ -10,10 +10,9 @@
 
 
 
-		<form th:action="@{/cliente/search}" method="get"
-			th:object="${searchFilter}" id="form">
-			<input type="hidden" th:field="*{searchType}" id="searchType" /> <input
-				type="hidden" th:field="*{categoriaId}" id="categoriaId" />
+		<form th:action="@{/cliente/search}" method="get" th:object="${searchFilter}" id="form">
+			<input type="hidden" th:field="*{searchType}" id="searchType" /> 
+			<input type="hidden" th:field="*{categoriaId}" id="categoriaId" />
 
 
 			<div>
@@ -65,26 +64,23 @@
 		</form>
 
 		<div id="divrestaurantesgeral">
-	
-	
-	<div id="divrestaurantesopcao" th:each="restaurante : ${restaurantes}">
-	
-	<a th:href="@{/cliente/restaurante} + '?restauranteId=' + ${restaurante.id}">
-	<img th:src="@{/images/logotipo/} + ${restaurante.logotipo }" id="imgRestauranteOpcao" />
-	<br />
-	<span id="restauranteopcaotitulo"th:text=${restaurante.nome}></span>
-	<br />
-	<span th:text="${restaurante.categoriaAsText}"></span>
-	<br />
-	<span th:text="'Tempo médio de entrega:' + ${restaurante.calcularTempoEntrega(cep)} + 'min'"></span>
-	<br />
-	<span th:text="'Taxa de entrega:' + ${#numbers.formatCurrency(restaurante.taxaEntrega)} " ></span>
-	<br />
-		<br />
-	</a>
 
-	</div>
-	</div>
+
+			<div id="divrestaurantesopcao"
+				th:each="restaurante : ${restaurantes}">
+
+				<a th:href="@{/cliente/restaurante} + '?restauranteId=' + ${restaurante.id}">
+					<img th:src="@{/images/logotipo/} + ${restaurante.logotipo }" id="imgRestauranteOpcao" /> <br /> 
+					<span id="restauranteopcaotitulo" th:text=${restaurante.nome}></span> <br />
+					<span th:text="${restaurante.categoriaAsText}"></span> <br /> 
+					<span th:text="'Tempo médio de entrega:' + ${restaurante.calcularTempoEntrega(cep)} + 'min'"></span>
+					<br /> 
+					<span th:text="'Taxa de entrega:' + ${#numbers.formatCurrency(restaurante.taxaEntrega)} "></span>
+					<br /> <br />
+				</a>
+
+			</div>
+		</div>
 	<div th:if="${restaurantes.size() == 0}">
 				<span>Nenhum restaurante encontrado</span>
 				<br />
@@ -93,7 +89,7 @@
 			<br />
 			<input type="button" value="Voltar" th:onclick="'location.href=\'' + @{/cliente/home} + '\';'" />
 		
-	
+	</div>
 	</body>
 
 </html>

@@ -17,7 +17,7 @@ public class UploadValidator implements ConstraintValidator<UploadConstraint, Mu
 	
 	@Override
 	public void initialize(UploadConstraint constraintAnnotation) {
-		// TODO Auto-generated method stub
+		
 		acceptedFileTypes = Arrays.asList(constraintAnnotation.acceptedTypes());
 	}
 

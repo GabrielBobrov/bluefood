@@ -31,7 +31,7 @@ public class StringUtils {
 		if(strings == null || strings.size() == 0) {
 			return null;
 		}
-		StringBuilder sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder();//string builder concatena strings
 		String delimiter = ", ";
 		boolean first = true;
 		

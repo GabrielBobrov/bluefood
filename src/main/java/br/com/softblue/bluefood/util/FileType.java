@@ -8,7 +8,7 @@ public enum FileType {
 	String mimeType;
 	String extension;
 	
-	FileType(String mimeType, String extension) {
+	FileType(String mimeType, String extension) {//mimetype exemplo : image/png, auxilia a definir a extensao
 		this.mimeType = mimeType;
 		this.extension = extension;
 	}

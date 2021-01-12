@@ -22,7 +22,7 @@ public class RestauranteComparator implements Comparator<Restaurante> {
 		if(filter.getOrder() == Order.Taxa) {
 			result = r1.getTaxaEntrega().compareTo(r2.getTaxaEntrega());
 		}else if(filter.getOrder() == Order.Tempo) {
-			result = r1.calcularTempoEntrega(cep).compareTo(r2.calcularTempoEntrega(cep));
+			result = r1.calcularTempoEntrega(cep).compareTo(r2.calcularTempoEntrega(cep));//compare to retorna 1, 0 ou -1
 		}else {
 			throw new IllegalStateException("O valor de ordenação" + filter.getOrder() +"não é valido" );
 		}

@@ -24,11 +24,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Usuario usuario = clienteRepository.findByEmail(username);
 		
-		if(usuario == null) {
+		if (usuario == null) {
 			usuario = restauranteRepository.findByEmail(username);
-		}if(usuario == null){
-			throw new UsernameNotFoundException(username);
 			
+			if (usuario == null) {
+				throw new UsernameNotFoundException(username);
+			}
 		}
 		return new LoggedUser(usuario);
 	}

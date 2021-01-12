@@ -60,7 +60,7 @@ public class Restaurante  extends Usuario{
 	@Max(99)
 	private Integer tempoEntregaBase;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER)//eager busca as categorias associadas ao banco
 	@JoinTable(
 			name = "restaurante_has_categorias",
 			joinColumns= @JoinColumn(name="restaurante_id"),
@@ -83,7 +83,7 @@ public class Restaurante  extends Usuario{
 	}
 	
 	public String getCategoriaAsText() {
-		Set<String> strings = new LinkedHashSet<>();
+		Set<String> strings = new LinkedHashSet<>(); //linkedhashset não permite elementos duplicados
 		
 		for(CategoriaRestaurante categoria : categorias) {
 			strings.add(categoria.getNome());
@@ -95,7 +95,7 @@ public class Restaurante  extends Usuario{
 	public Integer calcularTempoEntrega(String cep) {
 		int soma = 0;
 		for( char c : cep.toCharArray()) {
-			int v =Character.getNumericValue(c);
+			int v =Character.getNumericValue(c);//getnumericvalue converte string em int
 			if(v>0) {
 				soma+=v;
 				

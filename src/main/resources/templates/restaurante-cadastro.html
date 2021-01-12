@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-  	  xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+  	  xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}" th:with="link= ${editMode} ? @{/restaurante/home} : @{/}">
 
 
 <body>

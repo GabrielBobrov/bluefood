@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure (HttpSecurity http) throws Exception{
 		http.csrf().disable()
 		.authorizeRequests()
-		.antMatchers("/img/**", "/css/**", "/js/**", "/public", "/sbpay").permitAll()//padroes de acesso
+		.antMatchers("/img/**", "/css/**", "/js/**", "/public/**", "/sbpay/**").permitAll()//padroes de acesso
 		.antMatchers("/cliente/**").hasRole(Role.CLIENTE.toString())
 		.antMatchers("/restaurante/**").hasRole(Role.RESTAURANTE.toString())
 		.anyRequest().authenticated()
